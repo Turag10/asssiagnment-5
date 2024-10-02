@@ -49,7 +49,7 @@
         <!-- Right (Balance) -->
         <div class="flex items-center space-x-2">
             <img src="assets/coin.png" alt="Coin" class="w-6 h-6">
-            <span class="text-yellow-500 font-bold">4400 BDT</span>
+            <span class="text-yellow-500 font-bold" id="mainBalance">4400 BDT</span>
         </div>
     </header>
 
@@ -68,7 +68,7 @@
             </div>
             <div class="p-6 flex-1">
                 <div class="flex justify-between items-center">
-                    <span class="text-yellow-500 font-bold">0 BDT</span>
+                    <span class="text-yellow-500 font-bold" id="innerBln1">0 BDT</span>
                     <h2 class="font-semibold text-lg">Donate for Flood at Noakhali, Bangladesh</h2>
                 </div>
                 <p class="text-gray-600 mt-2">
@@ -87,7 +87,7 @@
             </div>
             <div class="p-6 flex-1">
                 <div class="flex justify-between items-center">
-                    <span class="text-yellow-500 font-bold">600 BDT</span>
+                    <span class="text-yellow-500 font-bold" id="innerBln2">600 BDT</span>
                     <h2 class="font-semibold text-lg">Donate for Flood Relief in Feni, Bangladesh</h2>
                 </div>
                 <p class="text-gray-600 mt-2">
@@ -106,7 +106,7 @@
             </div>
             <div class="p-6 flex-1">
                 <div class="flex justify-between items-center">
-                    <span class="text-yellow-500 font-bold">2400 BDT</span>
+                    <span class="text-yellow-500 font-bold" id="innerBln3">2400 BDT</span>
                     <h2 class="font-semibold text-lg">Aid for Injured in the Quota Movement</h2>
                 </div>
                 <p class="text-gray-600 mt-2">
@@ -128,31 +128,7 @@
         </div>
     </div>
 
-    <script>
-        function submitDonation(cardNumber) {
-            const donationAmount = document.getElementById('donationAmount' + cardNumber).value;
-
-            // Check if the input is a valid number
-            if (isNaN(donationAmount) || donationAmount === "") {
-                alert("Please enter a valid donation amount.");
-                return;
-            }
-
-            // Update the corresponding balance for the donation card
-            const balanceElement = document.querySelectorAll('.text-yellow-500')[cardNumber - 1];
-            const currentBalance = parseInt(balanceElement.innerText.split(' ')[0]);
-            const newBalance = currentBalance + parseInt(donationAmount);
-            balanceElement.innerText = `${newBalance} BDT`;
-
-            // Show the confirmation modal
-            const modal = document.getElementById('confirmationModal');
-            modal.classList.add('active');
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('confirmationModal');
-            modal.classList.remove('active');
-        }
-    </script>
+    <script src="js/login.js"></script>
 </body>
 </html>
+
