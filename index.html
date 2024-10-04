@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,17 +34,18 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-100">
 
     <!-- Header -->
-    <header class="bg-white shadow p-4 flex items-center justify-between">
+    <header class="sticky top-0 bg-white shadow p-4 flex items-center justify-between z-index">
         <!-- Left (Blog Link) -->
-        <a href="#" class="text-xl font-bold text-green-600 bg-green-400 px-4 py-2">Blog</a>
+        <a href="#" onclick="goToBlog()" class="text-xl font-bold text-black bg-lime-400 px-4 py-2">Blog</a>
 
         <!-- Center (Donate Bangladesh Title) -->
         <div class="flex text-center items-center space-x-2">
-            <img src="assets/logo.png" alt="" srcset="">
-            <h1 class="text-2xl font-semibold">Donate Bangladesh</h1>
+            <img src="assets/logo.png" alt="Logo" class="w-8 h-8">
+            <h1 class="text-2xl font-semibold"> Donate Bangladesh</h1>
         </div>
 
         <!-- Right (Balance) -->
@@ -56,14 +58,14 @@
     <!-- Tabs -->
     <div class="flex justify-center mt-2">
         <button class="bg-green-400 text-white py-2 px-4 rounded-lg mr-2">Donation</button>
-        <button class="border-2 border-gray-300 text-gray-600 py-2 px-4 rounded-lg">History</button>
+        <button onclick="window.location.href='history.html'" class="border-2 border-gray-300 text-gray-600 py-2 px-4 rounded-lg">History</button>
     </div>
 
     <!-- Donation Cards -->
-    <div class="max-w-5xl mx-auto p-4 grid grid-cols-1 gap-6 mt-6">
+    <div class="max-w-5xl mx-auto p-4 grid grid-cols-1 gap-6 mt-6 lg:grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
         <!-- Card 1 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden flex">
-            <div class="w-1/3">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col lg:flex-row">
+            <div class="lg:w-1/3 w-full">
                 <img src="assets/noakhali.png" class="h-60 w-full object-cover">
             </div>
             <div class="p-6 flex-1">
@@ -72,17 +74,19 @@
                     <h2 class="font-semibold text-lg">Donate for Flood at Noakhali, Bangladesh</h2>
                 </div>
                 <p class="text-gray-600 mt-2">
-                    The recent floods in Noakhali have caused significant damage to homes and infrastructure. 
-                    Your donation will help provide essential supplies to those affected.
+                    The recent floods in Noakhali have caused significant damage to homes and infrastructure. Your donation
+                    will help provide essential supplies to those affected.
                 </p>
-                <input type="text" id="donationAmount1" placeholder="Write Donation Amount" class="mt-4 w-full border-gray-300 border p-2 rounded">
-                <button onclick="submitDonation(1)" class="w-full bg-lime-400 text-white py-2 px-4 mt-4 rounded-lg">Donate Now</button>
+                <input type="text" id="donationAmount1" placeholder="Write Donation Amount"
+                    class="mt-4 w-full border-gray-300 border p-2 rounded">
+                <button onclick="submitDonation(1)" class="w-full bg-lime-400 text-white py-2 px-4 mt-4 rounded-lg">Donate
+                    Now</button>
             </div>
         </div>
 
         <!-- Card 2 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden flex">
-            <div class="w-1/3">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col lg:flex-row">
+            <div class="lg:w-1/3 w-full">
                 <img src="assets/feni.png" class="h-60 w-full object-cover">
             </div>
             <div class="p-6 flex-1">
@@ -91,17 +95,19 @@
                     <h2 class="font-semibold text-lg">Donate for Flood Relief in Feni, Bangladesh</h2>
                 </div>
                 <p class="text-gray-600 mt-2">
-                    The recent floods in Feni have devastated local communities, leading to severe disruption and loss. 
-                    Your generous donation will provide immediate aid.
+                    The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your
+                    generous donation will provide immediate aid.
                 </p>
-                <input type="text" id="donationAmount2" placeholder="Write Donation Amount" class="mt-4 w-full border-gray-300 border p-2 rounded">
-                <button onclick="submitDonation(2)" class="w-full bg-lime-400 text-white py-2 px-4 mt-4 rounded-lg">Donate Now</button>
+                <input type="text" id="donationAmount2" placeholder="Write Donation Amount"
+                    class="mt-4 w-full border-gray-300 border p-2 rounded">
+                <button onclick="submitDonation(2)" class="w-full bg-lime-400 text-white py-2 px-4 mt-4 rounded-lg">Donate
+                    Now</button>
             </div>
         </div>
 
         <!-- Card 3 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden flex">
-            <div class="w-1/3">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col lg:flex-row">
+            <div class="lg:w-1/3 w-full">
                 <img src="assets/quota-protest.png" alt="Quota Movement" class="h-60 w-full object-cover">
             </div>
             <div class="p-6 flex-1">
@@ -110,11 +116,13 @@
                     <h2 class="font-semibold text-lg">Aid for Injured in the Quota Movement</h2>
                 </div>
                 <p class="text-gray-600 mt-2">
-                    The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals.
-                    Your support is crucial in providing medical assistance.
+                    The recent Quota movement has resulted in numerous injuries and significant hardship for many
+                    individuals. Your support is crucial in providing medical assistance.
                 </p>
-                <input type="text" id="donationAmount3" placeholder="Write Donation Amount" class="mt-4 w-full border-gray-300 border p-2 rounded">
-                <button onclick="submitDonation(3)" class="w-full bg-lime-400 text-white py-2 px-4 mt-4 rounded-lg">Donate Now</button>
+                <input type="text" id="donationAmount3" placeholder="Write Donation Amount"
+                    class="mt-4 w-full border-gray-300 border p-2 rounded">
+                <button onclick="submitDonation(3)" class="w-full bg-lime-400 text-white py-2 px-4 mt-4 rounded-lg">Donate
+                    Now</button>
             </div>
         </div>
     </div>
@@ -129,6 +137,9 @@
     </div>
 
     <script src="js/login.js"></script>
+    <script src="js/history.js"></script>
+
 </body>
+
 </html>
 
