@@ -11,7 +11,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Custom styles for FAQ section */
         .faq-question {
             font-weight: bold;
         }
@@ -30,20 +29,17 @@
 
     <!-- Navbar -->
     <header class="sticky top-0 bg-white shadow p-4 px-4 flex items-center justify-between z-200">
-        <!-- Left (Home Link) -->
+       
         <div>
-            <a href="#" class="text-xl font-bold text-black bg-lime-400 px-4 py-2">Home</a>
+            <a href="#" class="text-xl font-bold text-black bg-lime-400 px-4 p-2 rounded-lg">Home</a>
         </div>
 
-        <!-- Center (Logo and Title) -->
         <div class="absolute left-1/2 transform -translate-x-1/2 flex text-center items-center space-x-2">
             <img src="assets/logo.png" alt="Donate Bangladesh Logo" class="w-8 h-8">
             <h1 class="text-xl font-semibold"> Donate Bangladesh</h1>
         </div>
 
-        <!-- Right (Coin + Balance) -->
         <div class="flex items-center space-x-6 ml-auto">
-            <!-- Coin and Amount -->
             <div class="flex items-center space-x-2">
                 <img src="assets/coin.png" alt="Coin" class="w-6 h-6">
                 <span class="text-yellow-500 font-bold" id="mainBalance">4400 BDT</span>
@@ -52,34 +48,33 @@
     </header>
 
 
-    <!-- FAQ Section -->
     <section class="max-w-5xl mx-auto p-4 mt-10">
         <h2 class="text-3xl font-bold mb-6">Important FAQ <span class="text-lg">❓</span></h2>
 
-        <!-- Responsive grid for FAQ items -->
+        
         <div class="grid grid-cols-1 gap-6 lg:grid-cols-1 md:grid-cols-1 sm:grid-cols-1">
-            <!-- FAQ 1 -->
+            
             <div class="mb-6">
                 <p class="faq-question">What is the Document Object Model (DOM)?</p>
-                <textarea class="faq-input" rows="3" placeholder="Write your answer here"></textarea>
+                <textarea class="faq-input" rows="3" placeholder="Write your answer here">The Document Object Model (DOM) is a programming interface that represents the structure of an HTML or XML document as a tree of objects. It allows programs (like JavaScript) to interact with and manipulate the content, structure, and styles of a webpage dynamically.</textarea>
             </div>
 
-            <!-- FAQ 2 -->
+            
             <div class="mb-6">
                 <p class="faq-question">How do you select an element from the DOM?</p>
-                <textarea class="faq-input" rows="3" placeholder="Write your answer here"></textarea>
+                <textarea class="faq-input" rows="3" placeholder="Write your answer here">let element = document.getElementById("myElementId");</textarea>
             </div>
 
-            <!-- FAQ 3 -->
+            
             <div class="mb-6">
                 <p class="faq-question">What is event delegation in the context of the DOM, and why is it useful?</p>
-                <textarea class="faq-input" rows="3" placeholder="Write your answer here"></textarea>
+                <textarea class="faq-input" rows="3" placeholder="Write your answer here">Event delegation is a technique in the DOM that allows you to handle events at a higher level in the DOM hierarchy rather than assigning event handlers to each individual element. It involves using event bubbling to capture events on a parent element and handle them for one or more child elements.</textarea>
             </div>
 
-            <!-- FAQ 4 -->
+            
             <div class="mb-6">
                 <p class="faq-question">How do you manipulate an element's attributes and styles using the DOM?</p>
-                <textarea class="faq-input" rows="3" placeholder="Write your answer here"></textarea>
+                <textarea class="faq-input" rows="3" placeholder="Write your answer here">You can manipulate an element's attributes and styles using the DOM in JavaScript by accessing properties or using specific methods. Below is a guide on how to perform these manipulations.</textarea>
             </div>
         </div>
     </section>

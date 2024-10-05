@@ -39,29 +39,26 @@
 
     <!-- Header -->
     <header class="sticky top-0 bg-white shadow p-4 flex items-center justify-between z-index">
-        <!-- Left (Blog Link) -->
-        <a href="#" onclick="goToBlog()" class="text-xl font-bold text-black bg-lime-400 px-4 py-2">Blog</a>
+       
+        <a href="#" onclick="goToBlog()" class="text-xl font-bold text-black bg-lime-400 px-4 p-2 rounded-lg">Blog</a>
 
-        <!-- Center (Donate Bangladesh Title) -->
+        
         <div class="flex text-center items-center space-x-2">
             <img src="assets/logo.png" alt="Logo" class="w-8 h-8">
             <h1 class="text-2xl font-semibold"> Donate Bangladesh</h1>
         </div>
 
-        <!-- Right (Balance) -->
         <div class="flex items-center space-x-2">
             <img src="assets/coin.png" alt="Coin" class="w-6 h-6">
             <span class="text-yellow-500 font-bold" id="mainBalance">4400 BDT</span>
         </div>
     </header>
 
-    <!-- Tabs -->
     <div class="flex justify-center mt-2">
-        <button class="bg-green-400 text-white py-2 px-4 rounded-lg mr-2">Donation</button>
+        <button class="bg-lime-400 text-white py-2 px-4 rounded-lg mr-2">Donation</button>
         <button onclick="window.location.href='history.html'" class="border-2 border-gray-300 text-gray-600 py-2 px-4 rounded-lg">History</button>
     </div>
 
-    <!-- Donation Cards -->
     <div class="max-w-5xl mx-auto p-4 grid grid-cols-1 gap-6 mt-6 lg:grid-cols-1 md:grid-cols-2 sm:grid-cols-1">
         <!-- Card 1 -->
         <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col lg:flex-row">
